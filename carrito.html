@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>Carrito</title>
+</head>
+
+<body>
+
+    <audio id="eliminar" src="sound/deleteButton.mp3"></audio>
+    <audio id="vaciar" src="sound/empty.mp3"></audio>
+    <audio id="check" src="sound/check mark.mp3"></audio>
+
+    <div class="wrapper">
+
+        <header class="header-mobile">
+            <h1 class="header__titulo header__titulo--mobile">Curry II <span>Tech</span></h1>
+            <button class="open-menu" id="open-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
+        <aside>
+
+            <button class="close-menu" id="close-menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <header class="header">
+                <h1 class="header__titulo">Curry II <span>Teach</span></h1>
+            </header>
+
+            <nav class="nav">
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="img/icons/left.png" alt="">
+                        <a class="list__carrito" href="index.html">Seguir Comprando</a>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="img/icons/carrito.png" alt="" class="list__img">
+                        <a class="list__carrito active"> Carrito</a>
+                    </div>
+                </li>
+
+                </ul>
+            </nav>
+
+            <footer class="footer">
+
+                <p class="footer__texto"> © 2023 Curry II</p>
+            </footer>
+
+        </aside>
+
+        <main class="carrito">
+
+
+            <h2 class="carrito__titulo">Carrito</h2>
+
+            <div class="carrito__contenedor">
+
+                <div class="carrito__vacio" id="vacio">
+
+                    <img class="carrito__vacio-img vacio" src="img/carrito/Carrito-Vacio.png" alt="carrito-vacio">
+                    <p class="carrito__vacio-texto vacio">Oops! Parece que aún no has añadido nada a tu carrito. <i
+                            class="fa-regular fa-face-sad-tear"></i></p>
+                    <p class="carrito__vacio-texto vacio">Continua comprando para agregar productos a tu carrito</p>
+
+                </div>
+
+
+                <div id="contenedor-carrito" class="carrito__productos disabled">
+                    <!--Aqui van los productos del carrito con js-->
+                </div>
+
+                <div id="carrito-acciones" class="carrito__acciones disabled">
+                    <div class="carrito__acciones-izquierda">
+                        <button class="carrito__acciones-vaciar">Vaciar Carrito</button>
+                    </div>
+                    <div class="carrito__acciones-derecha">
+                        <div class="carrito__acciones-total">
+                            <p>Total:</p>
+                            <p id="total"> $2400</p>
+                        </div>
+                        <button class="carrito__acciones-comprar">Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+
+
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>
